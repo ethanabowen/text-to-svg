@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "noEmitOnError": false,
+        "lib": [ "ES2022" ],
+        "module": "commonjs",
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "sourceMap": true,
+        "allowJs": true, 
+        "outDir": "./dist"
+    },
+    "include": [ "src/*", "src/dependencies/*" ],
+    "exclude": [
+        "_site"
+    ],
+}
