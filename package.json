@@ -1,33 +1,25 @@
 {
-  "name": "google-font-to-svg-path",
+  "name": "text-to-svg",
   "version": "1.0.0",
-  "description": "Create an SVG path from a Google font",
-  "main": "index.js",
+  "description": "Create an SVG path from a Google font and any text",
+  "main": "Server.js",
   "scripts": {
     "build": "tsc",
     "start": "node ./dist/Server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/danmarshall/google-font-to-svg-path.git"
-  },
   "keywords": [
     "google",
     "fonts",
-    "svg"
+    "svg",
+    "text"
   ],
-  "author": "Dan Marshall",
+  "author": "Ethan Bowen",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/danmarshall/google-font-to-svg-path/issues"
-  },
-  "homepage": "https://github.com/danmarshall/google-font-to-svg-path#readme",
   "dependencies": {
     "@types/google.fonts": "^1.0.1",
     "axios": "^1.3.4",
     "express": "^4.18.2",
     "makerjs": "^0.9.71",
-    "node-fetch": "^2.6.9",
     "opentype.js": "^0.7.3"
   },
   "devDependencies": {
