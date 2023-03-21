@@ -35,7 +35,8 @@ var TextToSvg = /** @class */ (function () {
         // load font from local
         var font = (0, opentype_js_1.loadSync)(filePath);
         if (font != undefined) {
-            return this.callMakerjs(font, request.text, request.size, request.union, request.filled, request.kerning, request.separate, request.bezierAccuracy, request.units, request.fill, request.stroke, request.strokeWidth, request.strokeNonScaling, request.fillRule);
+            return this.callMakerjs(font, request.text, request.size, request.union, request.filled, request.kerning, request.separate, undefined, //request.bezierAccuracy,
+            request.units, request.fill, request.stroke, request.strokeWidth, request.strokeNonScaling, request.fillRule);
         }
         else {
             return "Font load fail";

@@ -72,7 +72,7 @@ export class TextToSvg {
         request.filled,
         request.kerning,
         request.separate,
-        request.bezierAccuracy,
+        undefined, //request.bezierAccuracy,
         request.units,
         request.fill,
         request.stroke,

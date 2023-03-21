@@ -46,13 +46,14 @@ var textToSvg = new TextToSvg_1.TextToSvg();
 var app = (0, express_1["default"])();
 app.use(express_1["default"].json());
 app.use(express_1["default"].urlencoded({ extended: true }));
-app.get("/text-to-svg", function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+app.get("/text-to-svg/:text", function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
     var textToSvgRequest, result;
     return __generator(this, function (_a) {
+        console.log("Request received for:  ".concat(req.params.text));
         textToSvgRequest = {
             family: "Roboto",
-            variant: "regular",
-            text: "API Gateway",
+            variant: "100",
+            text: req.params.text,
             size: 6,
             union: false,
             filled: true,
@@ -62,7 +63,7 @@ app.get("/text-to-svg", function (req, res) { return __awaiter(void 0, void 0, v
             units: "mm",
             fill: "#000",
             stroke: "#000",
-            strokeWidth: "0.25m",
+            strokeWidth: "0.15mm",
             strokeNonScaling: true,
             fillRule: "evenodd"
         };

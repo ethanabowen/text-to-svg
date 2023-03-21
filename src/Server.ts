@@ -9,12 +9,13 @@ const app: Express = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/text-to-svg", async (req: Request, res: Response) => {
+app.get("/text-to-svg/:text", async (req: Request, res: Response) => {
+  console.log(`Request received for:  ${req.params.text}`)
   var textToSvgRequest: TextToSvgRequest = {
     family: "Roboto",
-    variant: "regular",
-    text: "API Gateway",
-    size: 6,
+    variant: "100",
+    text: req.params.text,
+    size: 9,
     union: false,
     filled: true,
     kerning: true,
@@ -23,13 +24,13 @@ app.get("/text-to-svg", async (req: Request, res: Response) => {
     units: "mm",
     fill: "#000",
     stroke: "#000",
-    strokeWidth: "0.25m",
+    strokeWidth: "0.15mm",
     strokeNonScaling: true,
     fillRule: "evenodd",
   };
 
   let result = textToSvg.textToSvg(textToSvgRequest as TextToSvgRequest);
-
+  
   res.send(result);
 });
 
